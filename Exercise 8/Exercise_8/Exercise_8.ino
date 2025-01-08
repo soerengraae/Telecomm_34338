@@ -1,5 +1,7 @@
 #define potPin 0
 #define bluePin 9
+// Connect the pin for red to VDD
+// Connect the pin for green to GND
 
 uint16_t blue = 0;
 float voltage;
