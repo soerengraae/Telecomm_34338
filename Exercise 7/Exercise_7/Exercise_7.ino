@@ -1,3 +1,8 @@
+/**
+* @brief Connect the legs of the RGB LED as described below. Connect to ATmega328P via USART.
+* Transmit a string such as "210,11,31" to change the RGB values; must be between (including) 0 and 255.
+*/
+
 #define redPin 9    // Pin used must be analog '~'
 #define greenPin 10 // Pin used must be analog '~'
 #define bluePin 11  // Pin used must be analog '~'

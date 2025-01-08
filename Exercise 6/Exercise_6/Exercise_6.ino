@@ -1,3 +1,8 @@
+/**
+* @brief Connect the legs of the RGB LED as described below. Connect to ATmega328P via USART.
+* Transmit one single charachter: 'a', 'b', 'c', 'd', or 'e'. Do not use line ending nor carraige return.
+*/
+
 #define aPin 6  // LED for character 'a' is connected to D6.
 #define bPin 7  // LED for character 'b' is connected to D7.
 #define cPin 8  // LED for character 'c' is connected to D8.

@@ -1,3 +1,7 @@
+/**
+  @brief Connect to ATmega328P via USART.
+/*
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
