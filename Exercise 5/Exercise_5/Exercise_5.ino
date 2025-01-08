@@ -1,6 +1,6 @@
 /**
-  @brief Connect to ATmega328P via USART.
-/*
+* @brief Connect to ATmega328P via USART.
+*/
 
 void setup() {
   // put your setup code here, to run once:
