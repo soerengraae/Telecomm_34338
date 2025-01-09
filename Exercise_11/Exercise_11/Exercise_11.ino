@@ -30,7 +30,7 @@ void loop()
 
   // Print hot warning if temperature gets too high - only if it's not already printed
   if (temp > 27 && warningFlag == 0) {
-    lcd.setCursor(10, 1);
+    lcd.setCursor(13, 1);
     lcd.print("!!!");
     lcd.setCursor(0, 1);
 
@@ -39,7 +39,7 @@ void loop()
 
   // Clear hot warning if temperature drops
   if (temp < 27 && warningFlag == 1) {
-    lcd.setCursor(10, 1);
+    lcd.setCursor(13, 1);
     lcd.print("   ");
     lcd.setCursor(0, 1);
 
