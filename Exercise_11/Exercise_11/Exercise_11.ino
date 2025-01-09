@@ -49,6 +49,10 @@ void loop()
   lcd.setCursor(0, 1);
   lcd.print(temp, 2);
 
-  // Instead of using delay(1000) we could use a e.g. a low-pass filter or a moving average filter to make the temperature stable.
+  /**
+   * Instead of using delay(1000) for a stable temperature we could use a e.g. a low-pass filter or a moving average filter to make the temperature stable.
+   * If a low-pass filter is to be used, a delay between each display update should still be implemented however seen fit.
+   * For a moving average filter, the display would just update at the end of data collection.
+   */
   delay(1000);
 }
