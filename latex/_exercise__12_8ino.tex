@@ -1,0 +1,309 @@
+\doxysection{Exercise\+\_\+12/\+Exercise\+\_\+12/\+Exercise\+\_\+12.ino File Reference}
+\hypertarget{_exercise__12_8ino}{}\label{_exercise__12_8ino}\index{Exercise\_12/Exercise\_12/Exercise\_12.ino@{Exercise\_12/Exercise\_12/Exercise\_12.ino}}
+{\ttfamily \#include $<$Liquid\+Crystal.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a46da3ff1e495329b241e5830b70bcb80}{rs}}~12
+\begin{DoxyCompactList}\small\item\em Assign pins for the LCD interface (RS, EN, D4, D5, D6, D7). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_ade40deee5d8bc24ce010df887afdfe38}{en}}~11
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a307fa7a9ebf3c98ea1ee9815f096ef0f}{d4}}~5
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_ad5160e403b3418df0e8d4ef2c4b0aa2b}{d5}}~4
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a70aef75046a2ffba1914261004ed8395}{d6}}~3
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a2f9ad955dffae51f2c3957f1b9f75e17}{d7}}~2
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{LED1}}~6
+\begin{DoxyCompactList}\small\item\em LED pins. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_ad09fe5bf321b9a2de26bd5e5b9af6424}{LED2}}~7
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a4b7ff8e253a7412f83deba3a447028a8}{LED3}}~8
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_ae048837f20072bed467332b1bd1da9fa}{LED4}}~9
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_aefae505e2588183f1921a9e840b16044}{LED5}}~10
+\item 
+\#define \mbox{\hyperlink{_exercise__12_8ino_a352fec4313db424629486e83da01de55}{button\+Pin}}~13
+\begin{DoxyCompactList}\small\item\em Pin for the game button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Liquid\+Crystal \mbox{\hyperlink{_exercise__12_8ino_a817f6545bce2c289122706845ed0894c}{lcd}} (\mbox{\hyperlink{_exercise__12_8ino_a46da3ff1e495329b241e5830b70bcb80}{rs}}, \mbox{\hyperlink{_exercise__12_8ino_ade40deee5d8bc24ce010df887afdfe38}{en}}, \mbox{\hyperlink{_exercise__12_8ino_a307fa7a9ebf3c98ea1ee9815f096ef0f}{d4}}, \mbox{\hyperlink{_exercise__12_8ino_ad5160e403b3418df0e8d4ef2c4b0aa2b}{d5}}, \mbox{\hyperlink{_exercise__12_8ino_a70aef75046a2ffba1914261004ed8395}{d6}}, \mbox{\hyperlink{_exercise__12_8ino_a2f9ad955dffae51f2c3957f1b9f75e17}{d7}})
+\begin{DoxyCompactList}\small\item\em Instantiate LCD using selected pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Arduino setup function. Initializes LCD, input pins, and LED pins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_a9b49db0847835e6cdc4d98fe16f4f762}{random\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Lights one random LED and turns off the others. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_ad696e732ee0c401c8b79fe4f3318aad8}{snake\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em "{}\+Snake"{} sequence\+: turns off the previous LED and turns on the new one. Cycles through the array of LEDs in a linear pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}{win}} ()
+\begin{DoxyCompactList}\small\item\em Displays a winning message and rapidly flashes the LEDs indefinitely. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_ae85c96d8ab4fe9d1b125421eaaef40e2}{hit}} ()
+\begin{DoxyCompactList}\small\item\em Process a successful hit. Increments hits, applies fancy LED flashing, and eventually triggers \doxylink{_exercise__12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}{win()}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_a74201ac95d82066b5a7d07c5307597ac}{miss}} ()
+\begin{DoxyCompactList}\small\item\em Process a miss. Increments misses and pauses briefly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__12_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Arduino loop function, repeatedly updates LED sequences and checks for button presses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_ac8fe3aefa8630415d958edd13464cead}{LEDS}} \mbox{[}$\,$\mbox{]} = \{\mbox{\hyperlink{_exercise__2c_8ino_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{LED1}}, \mbox{\hyperlink{_exercise__2c_8ino_ad09fe5bf321b9a2de26bd5e5b9af6424}{LED2}}, \mbox{\hyperlink{_exercise__12_8ino_a4b7ff8e253a7412f83deba3a447028a8}{LED3}}, \mbox{\hyperlink{_exercise__12_8ino_ae048837f20072bed467332b1bd1da9fa}{LED4}}, \mbox{\hyperlink{_exercise__12_8ino_aefae505e2588183f1921a9e840b16044}{LED5}}\}
+\begin{DoxyCompactList}\small\item\em Array of LED pins for iteration. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_a10fa20202b15badc5a8e474c2fd0fa66}{LED}} = 0
+\begin{DoxyCompactList}\small\item\em Index of the current LED. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_aaad54d0838c25c858bca459a1cf1241b}{hit\+Flag}} = 0
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the user has already hit a successful press this cycle. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_a2f165d50eff9c07ead588e776790bd3b}{delay\+Time}} = 50
+\begin{DoxyCompactList}\small\item\em Delay time in increments of 10ms (50 =\texorpdfstring{$>$}{>} 500ms). \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_a4a89f69fc22f1883cdc3150a8f9437bd}{hits}} = 0
+\begin{DoxyCompactList}\small\item\em Total number of hits. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_a25a70f805b01f8fcd5dd971ee216cf79}{misses}} = 0
+\begin{DoxyCompactList}\small\item\em Total misses so far. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_exercise__12_8ino_aeb824be75611cc83b9b6e8d18b66bfc1}{counter}} = 0
+\begin{DoxyCompactList}\small\item\em Used as timekeeper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_exercise__12_8ino_a352fec4313db424629486e83da01de55}\index{Exercise\_12.ino@{Exercise\_12.ino}!buttonPin@{buttonPin}}
+\index{buttonPin@{buttonPin}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{buttonPin}{buttonPin}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a352fec4313db424629486e83da01de55} 
+\#define button\+Pin~13}
+
+
+
+Pin for the game button. 
+
+\Hypertarget{_exercise__12_8ino_a307fa7a9ebf3c98ea1ee9815f096ef0f}\index{Exercise\_12.ino@{Exercise\_12.ino}!d4@{d4}}
+\index{d4@{d4}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{d4}{d4}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a307fa7a9ebf3c98ea1ee9815f096ef0f} 
+\#define d4~5}
+
+\Hypertarget{_exercise__12_8ino_ad5160e403b3418df0e8d4ef2c4b0aa2b}\index{Exercise\_12.ino@{Exercise\_12.ino}!d5@{d5}}
+\index{d5@{d5}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{d5}{d5}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ad5160e403b3418df0e8d4ef2c4b0aa2b} 
+\#define d5~4}
+
+\Hypertarget{_exercise__12_8ino_a70aef75046a2ffba1914261004ed8395}\index{Exercise\_12.ino@{Exercise\_12.ino}!d6@{d6}}
+\index{d6@{d6}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{d6}{d6}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a70aef75046a2ffba1914261004ed8395} 
+\#define d6~3}
+
+\Hypertarget{_exercise__12_8ino_a2f9ad955dffae51f2c3957f1b9f75e17}\index{Exercise\_12.ino@{Exercise\_12.ino}!d7@{d7}}
+\index{d7@{d7}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{d7}{d7}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a2f9ad955dffae51f2c3957f1b9f75e17} 
+\#define d7~2}
+
+\Hypertarget{_exercise__12_8ino_ade40deee5d8bc24ce010df887afdfe38}\index{Exercise\_12.ino@{Exercise\_12.ino}!en@{en}}
+\index{en@{en}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{en}{en}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ade40deee5d8bc24ce010df887afdfe38} 
+\#define en~11}
+
+\Hypertarget{_exercise__12_8ino_a8aa85ae9867fabf70ec72cd3bf6fb6b9}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED1@{LED1}}
+\index{LED1@{LED1}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED1}{LED1}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a8aa85ae9867fabf70ec72cd3bf6fb6b9} 
+\#define LED1~6}
+
+
+
+LED pins. 
+
+\Hypertarget{_exercise__12_8ino_ad09fe5bf321b9a2de26bd5e5b9af6424}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED2@{LED2}}
+\index{LED2@{LED2}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED2}{LED2}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ad09fe5bf321b9a2de26bd5e5b9af6424} 
+\#define LED2~7}
+
+\Hypertarget{_exercise__12_8ino_a4b7ff8e253a7412f83deba3a447028a8}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED3@{LED3}}
+\index{LED3@{LED3}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED3}{LED3}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a4b7ff8e253a7412f83deba3a447028a8} 
+\#define LED3~8}
+
+\Hypertarget{_exercise__12_8ino_ae048837f20072bed467332b1bd1da9fa}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED4@{LED4}}
+\index{LED4@{LED4}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED4}{LED4}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ae048837f20072bed467332b1bd1da9fa} 
+\#define LED4~9}
+
+\Hypertarget{_exercise__12_8ino_aefae505e2588183f1921a9e840b16044}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED5@{LED5}}
+\index{LED5@{LED5}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED5}{LED5}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_aefae505e2588183f1921a9e840b16044} 
+\#define LED5~10}
+
+\Hypertarget{_exercise__12_8ino_a46da3ff1e495329b241e5830b70bcb80}\index{Exercise\_12.ino@{Exercise\_12.ino}!rs@{rs}}
+\index{rs@{rs}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{rs}{rs}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a46da3ff1e495329b241e5830b70bcb80} 
+\#define rs~12}
+
+
+
+Assign pins for the LCD interface (RS, EN, D4, D5, D6, D7). 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise__12_8ino_ae85c96d8ab4fe9d1b125421eaaef40e2}\index{Exercise\_12.ino@{Exercise\_12.ino}!hit@{hit}}
+\index{hit@{hit}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ae85c96d8ab4fe9d1b125421eaaef40e2} 
+void hit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Process a successful hit. Increments hits, applies fancy LED flashing, and eventually triggers \doxylink{_exercise__12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}{win()}. 
+
+\Hypertarget{_exercise__12_8ino_a817f6545bce2c289122706845ed0894c}\index{Exercise\_12.ino@{Exercise\_12.ino}!lcd@{lcd}}
+\index{lcd@{lcd}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a817f6545bce2c289122706845ed0894c} 
+Liquid\+Crystal lcd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_exercise__12_8ino_a46da3ff1e495329b241e5830b70bcb80}{rs}}}]{}{, }\item[{\mbox{\hyperlink{_exercise__12_8ino_ade40deee5d8bc24ce010df887afdfe38}{en}}}]{}{, }\item[{\mbox{\hyperlink{_exercise__12_8ino_a307fa7a9ebf3c98ea1ee9815f096ef0f}{d4}}}]{}{, }\item[{\mbox{\hyperlink{_exercise__12_8ino_ad5160e403b3418df0e8d4ef2c4b0aa2b}{d5}}}]{}{, }\item[{\mbox{\hyperlink{_exercise__12_8ino_a70aef75046a2ffba1914261004ed8395}{d6}}}]{}{, }\item[{\mbox{\hyperlink{_exercise__12_8ino_a2f9ad955dffae51f2c3957f1b9f75e17}{d7}}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Instantiate LCD using selected pins. 
+
+\Hypertarget{_exercise__12_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise\_12.ino@{Exercise\_12.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino loop function, repeatedly updates LED sequences and checks for button presses. 
+
+\Hypertarget{_exercise__12_8ino_a74201ac95d82066b5a7d07c5307597ac}\index{Exercise\_12.ino@{Exercise\_12.ino}!miss@{miss}}
+\index{miss@{miss}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{miss()}{miss()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a74201ac95d82066b5a7d07c5307597ac} 
+void miss (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Process a miss. Increments misses and pauses briefly. 
+
+\Hypertarget{_exercise__12_8ino_a9b49db0847835e6cdc4d98fe16f4f762}\index{Exercise\_12.ino@{Exercise\_12.ino}!randomSequence@{randomSequence}}
+\index{randomSequence@{randomSequence}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{randomSequence()}{randomSequence()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a9b49db0847835e6cdc4d98fe16f4f762} 
+void random\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lights one random LED and turns off the others. 
+
+\Hypertarget{_exercise__12_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise\_12.ino@{Exercise\_12.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino setup function. Initializes LCD, input pins, and LED pins. 
+
+\Hypertarget{_exercise__12_8ino_ad696e732ee0c401c8b79fe4f3318aad8}\index{Exercise\_12.ino@{Exercise\_12.ino}!snakeSequence@{snakeSequence}}
+\index{snakeSequence@{snakeSequence}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{snakeSequence()}{snakeSequence()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ad696e732ee0c401c8b79fe4f3318aad8} 
+void snake\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+"{}\+Snake"{} sequence\+: turns off the previous LED and turns on the new one. Cycles through the array of LEDs in a linear pattern. 
+
+\Hypertarget{_exercise__12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}\index{Exercise\_12.ino@{Exercise\_12.ino}!win@{win}}
+\index{win@{win}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{win()}{win()}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a8ee55ac8993fb3160edf3668cec2fba4} 
+void win (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays a winning message and rapidly flashes the LEDs indefinitely. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise__12_8ino_aeb824be75611cc83b9b6e8d18b66bfc1}\index{Exercise\_12.ino@{Exercise\_12.ino}!counter@{counter}}
+\index{counter@{counter}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_aeb824be75611cc83b9b6e8d18b66bfc1} 
+uint16\+\_\+t counter = 0}
+
+
+
+Used as timekeeper. 
+
+\Hypertarget{_exercise__12_8ino_a2f165d50eff9c07ead588e776790bd3b}\index{Exercise\_12.ino@{Exercise\_12.ino}!delayTime@{delayTime}}
+\index{delayTime@{delayTime}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{delayTime}{delayTime}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a2f165d50eff9c07ead588e776790bd3b} 
+uint8\+\_\+t delay\+Time = 50}
+
+
+
+Delay time in increments of 10ms (50 =\texorpdfstring{$>$}{>} 500ms). 
+
+\Hypertarget{_exercise__12_8ino_aaad54d0838c25c858bca459a1cf1241b}\index{Exercise\_12.ino@{Exercise\_12.ino}!hitFlag@{hitFlag}}
+\index{hitFlag@{hitFlag}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{hitFlag}{hitFlag}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_aaad54d0838c25c858bca459a1cf1241b} 
+uint8\+\_\+t hit\+Flag = 0}
+
+
+
+Flag indicating whether the user has already hit a successful press this cycle. 
+
+\Hypertarget{_exercise__12_8ino_a4a89f69fc22f1883cdc3150a8f9437bd}\index{Exercise\_12.ino@{Exercise\_12.ino}!hits@{hits}}
+\index{hits@{hits}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{hits}{hits}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a4a89f69fc22f1883cdc3150a8f9437bd} 
+uint16\+\_\+t hits = 0}
+
+
+
+Total number of hits. 
+
+\Hypertarget{_exercise__12_8ino_a10fa20202b15badc5a8e474c2fd0fa66}\index{Exercise\_12.ino@{Exercise\_12.ino}!LED@{LED}}
+\index{LED@{LED}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LED}{LED}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a10fa20202b15badc5a8e474c2fd0fa66} 
+uint8\+\_\+t LED = 0}
+
+
+
+Index of the current LED. 
+
+\Hypertarget{_exercise__12_8ino_ac8fe3aefa8630415d958edd13464cead}\index{Exercise\_12.ino@{Exercise\_12.ino}!LEDS@{LEDS}}
+\index{LEDS@{LEDS}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{LEDS}{LEDS}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_ac8fe3aefa8630415d958edd13464cead} 
+uint8\+\_\+t LEDS\mbox{[}$\,$\mbox{]} = \{\mbox{\hyperlink{_exercise__2c_8ino_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{LED1}}, \mbox{\hyperlink{_exercise__2c_8ino_ad09fe5bf321b9a2de26bd5e5b9af6424}{LED2}}, \mbox{\hyperlink{_exercise__12_8ino_a4b7ff8e253a7412f83deba3a447028a8}{LED3}}, \mbox{\hyperlink{_exercise__12_8ino_ae048837f20072bed467332b1bd1da9fa}{LED4}}, \mbox{\hyperlink{_exercise__12_8ino_aefae505e2588183f1921a9e840b16044}{LED5}}\}}
+
+
+
+Array of LED pins for iteration. 
+
+\Hypertarget{_exercise__12_8ino_a25a70f805b01f8fcd5dd971ee216cf79}\index{Exercise\_12.ino@{Exercise\_12.ino}!misses@{misses}}
+\index{misses@{misses}!Exercise\_12.ino@{Exercise\_12.ino}}
+\doxysubsubsection{\texorpdfstring{misses}{misses}}
+{\footnotesize\ttfamily \label{_exercise__12_8ino_a25a70f805b01f8fcd5dd971ee216cf79} 
+uint16\+\_\+t misses = 0}
+
+
+
+Total misses so far. 
+

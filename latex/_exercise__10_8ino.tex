@@ -1,0 +1,120 @@
+\doxysection{Exercise\+\_\+10/\+Exercise\+\_\+10/\+Exercise\+\_\+10.ino File Reference}
+\hypertarget{_exercise__10_8ino}{}\label{_exercise__10_8ino}\index{Exercise\_10/Exercise\_10/Exercise\_10.ino@{Exercise\_10/Exercise\_10/Exercise\_10.ino}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_exercise__10_8ino_a6ea56d893fdedaa73b511d51604bb63d}{temp\+Pin}}~0
+\begin{DoxyCompactList}\small\item\em Connect the legs of the LM35 as described below. Connect to ATmega328P via USART. Connect three LEDs as described by their defines. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_exercise__10_8ino_a1a56ea4d69b5651122b6fb8a879ec8c4}{green\+LED}}~8
+\item 
+\#define \mbox{\hyperlink{_exercise__10_8ino_ad18a7b985c3a8c2d2616b1e45b239df6}{yellow\+LED}}~9
+\item 
+\#define \mbox{\hyperlink{_exercise__10_8ino_a97e57dfaebb69a380f27bb69e8170365}{red\+LED}}~10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_a44c86a16afbd609f76c5c91956fa7a75}{cold}} ()
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_a87e6f2715aad77c8cc05a70550c8c248}{warm}} ()
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_a97f8edc96dbfc7ac63407f5126f4c631}{hot}} ()
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_ade2de344ec6fcac4b7c18b1e67eb28f5}{update\+LEDS}} ()
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{_exercise__10_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_exercise__10_8ino_a1269d4aee95fe593422ec48efc42ad53}{sensor\+Reading}}
+\item 
+float \mbox{\hyperlink{_exercise__10_8ino_a24d61a35b72d7299eb6b5f48e71a571b}{temp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_exercise__10_8ino_a1a56ea4d69b5651122b6fb8a879ec8c4}\index{Exercise\_10.ino@{Exercise\_10.ino}!greenLED@{greenLED}}
+\index{greenLED@{greenLED}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{greenLED}{greenLED}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a1a56ea4d69b5651122b6fb8a879ec8c4} 
+\#define green\+LED~8}
+
+\Hypertarget{_exercise__10_8ino_a97e57dfaebb69a380f27bb69e8170365}\index{Exercise\_10.ino@{Exercise\_10.ino}!redLED@{redLED}}
+\index{redLED@{redLED}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{redLED}{redLED}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a97e57dfaebb69a380f27bb69e8170365} 
+\#define red\+LED~10}
+
+\Hypertarget{_exercise__10_8ino_a6ea56d893fdedaa73b511d51604bb63d}\index{Exercise\_10.ino@{Exercise\_10.ino}!tempPin@{tempPin}}
+\index{tempPin@{tempPin}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{tempPin}{tempPin}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a6ea56d893fdedaa73b511d51604bb63d} 
+\#define temp\+Pin~0}
+
+
+
+Connect the legs of the LM35 as described below. Connect to ATmega328P via USART. Connect three LEDs as described by their defines. 
+
+\Hypertarget{_exercise__10_8ino_ad18a7b985c3a8c2d2616b1e45b239df6}\index{Exercise\_10.ino@{Exercise\_10.ino}!yellowLED@{yellowLED}}
+\index{yellowLED@{yellowLED}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{yellowLED}{yellowLED}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_ad18a7b985c3a8c2d2616b1e45b239df6} 
+\#define yellow\+LED~9}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise__10_8ino_a44c86a16afbd609f76c5c91956fa7a75}\index{Exercise\_10.ino@{Exercise\_10.ino}!cold@{cold}}
+\index{cold@{cold}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{cold()}{cold()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a44c86a16afbd609f76c5c91956fa7a75} 
+void cold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__10_8ino_a97f8edc96dbfc7ac63407f5126f4c631}\index{Exercise\_10.ino@{Exercise\_10.ino}!hot@{hot}}
+\index{hot@{hot}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{hot()}{hot()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a97f8edc96dbfc7ac63407f5126f4c631} 
+void hot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__10_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise\_10.ino@{Exercise\_10.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__10_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise\_10.ino@{Exercise\_10.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__10_8ino_ade2de344ec6fcac4b7c18b1e67eb28f5}\index{Exercise\_10.ino@{Exercise\_10.ino}!updateLEDS@{updateLEDS}}
+\index{updateLEDS@{updateLEDS}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{updateLEDS()}{updateLEDS()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_ade2de344ec6fcac4b7c18b1e67eb28f5} 
+void update\+LEDS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__10_8ino_a87e6f2715aad77c8cc05a70550c8c248}\index{Exercise\_10.ino@{Exercise\_10.ino}!warm@{warm}}
+\index{warm@{warm}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{warm()}{warm()}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a87e6f2715aad77c8cc05a70550c8c248} 
+void warm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise__10_8ino_a1269d4aee95fe593422ec48efc42ad53}\index{Exercise\_10.ino@{Exercise\_10.ino}!sensorReading@{sensorReading}}
+\index{sensorReading@{sensorReading}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{sensorReading}{sensorReading}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a1269d4aee95fe593422ec48efc42ad53} 
+uint16\+\_\+t sensor\+Reading}
+
+\Hypertarget{_exercise__10_8ino_a24d61a35b72d7299eb6b5f48e71a571b}\index{Exercise\_10.ino@{Exercise\_10.ino}!temp@{temp}}
+\index{temp@{temp}!Exercise\_10.ino@{Exercise\_10.ino}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily \label{_exercise__10_8ino_a24d61a35b72d7299eb6b5f48e71a571b} 
+float temp}
+

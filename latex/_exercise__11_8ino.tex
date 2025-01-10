@@ -1,0 +1,78 @@
+\doxysection{Exercise\+\_\+11/\+Exercise\+\_\+11/\+Exercise\+\_\+11.ino File Reference}
+\hypertarget{_exercise__11_8ino}{}\label{_exercise__11_8ino}\index{Exercise\_11/Exercise\_11/Exercise\_11.ino@{Exercise\_11/Exercise\_11/Exercise\_11.ino}}
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Liquid\+Crystal\+\_\+\+I2\+C.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_exercise__11_8ino_a6ea56d893fdedaa73b511d51604bb63d}{temp\+Pin}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Liquid\+Crystal\+\_\+\+I2C \mbox{\hyperlink{_exercise__11_8ino_ae084e1bc8ccb35ea289ba0ca4972ea6d}{lcd}} (0x27, 16, 2)
+\item 
+void \mbox{\hyperlink{_exercise__11_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{_exercise__11_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_exercise__11_8ino_a1269d4aee95fe593422ec48efc42ad53}{sensor\+Reading}}
+\item 
+float \mbox{\hyperlink{_exercise__11_8ino_a24d61a35b72d7299eb6b5f48e71a571b}{temp}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_exercise__11_8ino_a8dd93b36792ed9e43f94ca99d8c87862}{warning\+Flag}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_exercise__11_8ino_a6ea56d893fdedaa73b511d51604bb63d}\index{Exercise\_11.ino@{Exercise\_11.ino}!tempPin@{tempPin}}
+\index{tempPin@{tempPin}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{tempPin}{tempPin}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_a6ea56d893fdedaa73b511d51604bb63d} 
+\#define temp\+Pin~0}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise__11_8ino_ae084e1bc8ccb35ea289ba0ca4972ea6d}\index{Exercise\_11.ino@{Exercise\_11.ino}!lcd@{lcd}}
+\index{lcd@{lcd}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_ae084e1bc8ccb35ea289ba0ca4972ea6d} 
+Liquid\+Crystal\+\_\+\+I2C lcd (\begin{DoxyParamCaption}\item[{0x27}]{}{, }\item[{16}]{}{, }\item[{2}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_exercise__11_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise\_11.ino@{Exercise\_11.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Instead of using delay(1000) for a stable temperature we could use a e.\+g. a low-\/pass filter or a moving average filter to make the temperature stable. If a low-\/pass filter is to be used, a delay between each display update should still be implemented however seen fit. For a moving average filter, the display would just update at the end of data collection.\Hypertarget{_exercise__11_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise\_11.ino@{Exercise\_11.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise__11_8ino_a1269d4aee95fe593422ec48efc42ad53}\index{Exercise\_11.ino@{Exercise\_11.ino}!sensorReading@{sensorReading}}
+\index{sensorReading@{sensorReading}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{sensorReading}{sensorReading}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_a1269d4aee95fe593422ec48efc42ad53} 
+uint16\+\_\+t sensor\+Reading}
+
+\Hypertarget{_exercise__11_8ino_a24d61a35b72d7299eb6b5f48e71a571b}\index{Exercise\_11.ino@{Exercise\_11.ino}!temp@{temp}}
+\index{temp@{temp}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_a24d61a35b72d7299eb6b5f48e71a571b} 
+float temp}
+
+\Hypertarget{_exercise__11_8ino_a8dd93b36792ed9e43f94ca99d8c87862}\index{Exercise\_11.ino@{Exercise\_11.ino}!warningFlag@{warningFlag}}
+\index{warningFlag@{warningFlag}!Exercise\_11.ino@{Exercise\_11.ino}}
+\doxysubsubsection{\texorpdfstring{warningFlag}{warningFlag}}
+{\footnotesize\ttfamily \label{_exercise__11_8ino_a8dd93b36792ed9e43f94ca99d8c87862} 
+uint8\+\_\+t warning\+Flag = 0}
+

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['s_0',['S',['../_exercise__1_8ino.html#a19ee67519102fe7dbba46d5d93633712',1,'Exercise_1.ino']]],
+  ['sequence_1',['sequence',['../_exercise__2b_8ino.html#ad0bc5605a4658a88971c79432f702183',1,'Exercise_2b.ino']]],
+  ['setup_2',['setup',['../_exercise__1_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_1.ino'],['../_exercise__2b_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_2b.ino'],['../_exercise__2c_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_2c.ino'],['../_exercise__5_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_5.ino'],['../_exercise__6_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_6.ino'],['../_exercise__7_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_7.ino'],['../_exercise__8_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_8.ino'],['../_exercise__9_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_9.ino'],['../_exercise__10_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_10.ino'],['../_exercise__11_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_11.ino'],['../_exercise__12_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'setup():&#160;Exercise_12.ino']]],
+  ['snakesequence_3',['snakeSequence',['../_exercise__12_8ino.html#ad696e732ee0c401c8b79fe4f3318aad8',1,'Exercise_12.ino']]]
+];
