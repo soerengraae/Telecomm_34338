@@ -1,0 +1,114 @@
+\doxysection{Exercise\+\_\+16/\+Exercise\+\_\+16/\+Exercise\+\_\+16.ino File Reference}
+\hypertarget{_exercise__16_8ino}{}\label{_exercise__16_8ino}\index{Exercise\_16/Exercise\_16/Exercise\_16.ino@{Exercise\_16/Exercise\_16/Exercise\_16.ino}}
+{\ttfamily \#include $<$Wi\+Fi.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Multi.\+h$>$}\newline
+{\ttfamily \#include $<$Web\+Server.\+h$>$}\newline
+{\ttfamily \#include $<$ESPm\+DNS.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Web\+Server \mbox{\hyperlink{_exercise__16_8ino_a48f3f185be3ea2d153c347a157b38d42}{server}} (80)
+\begin{DoxyCompactList}\small\item\em Web server instance listening on port 80. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__16_8ino_a8427468f39342a1990703e9f5ce7fd29}{handle\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Handles the root ("{}/"{}) HTTP GET request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__16_8ino_ac23730de88ab78bcaa26c7e3191dbb9d}{handle\+LED}} ()
+\begin{DoxyCompactList}\small\item\em Handles the "{}/\+LED"{} HTTP POST request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__16_8ino_a54f2b176a577c7a89bb94da4f12cd06b}{handle\+Not\+Found}} ()
+\begin{DoxyCompactList}\small\item\em Handles requests for non-\/existent pages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__16_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Arduino setup function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__16_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Arduino main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Wi\+Fi\+Multi \mbox{\hyperlink{_exercise__16_8ino_a80e3f4f67583616ce41a6da66f886e10}{wifi\+Multi}}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi\+Multi instance to manage multiple networks. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_exercise__16_8ino_aa6565effcd86b61e6ab132971ff14438}{led}} = 4
+\begin{DoxyCompactList}\small\item\em GPIO pin used to drive the LED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise__16_8ino_ac23730de88ab78bcaa26c7e3191dbb9d}\index{Exercise\_16.ino@{Exercise\_16.ino}!handleLED@{handleLED}}
+\index{handleLED@{handleLED}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{handleLED()}{handleLED()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_ac23730de88ab78bcaa26c7e3191dbb9d} 
+void handle\+LED (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the "{}/\+LED"{} HTTP POST request. 
+
+Toggles the state of the LED and redirects back to the root page. \Hypertarget{_exercise__16_8ino_a54f2b176a577c7a89bb94da4f12cd06b}\index{Exercise\_16.ino@{Exercise\_16.ino}!handleNotFound@{handleNotFound}}
+\index{handleNotFound@{handleNotFound}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{handleNotFound()}{handleNotFound()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_a54f2b176a577c7a89bb94da4f12cd06b} 
+void handle\+Not\+Found (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles requests for non-\/existent pages. 
+
+Sends a 404 Not Found response. \Hypertarget{_exercise__16_8ino_a8427468f39342a1990703e9f5ce7fd29}\index{Exercise\_16.ino@{Exercise\_16.ino}!handleRoot@{handleRoot}}
+\index{handleRoot@{handleRoot}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{handleRoot()}{handleRoot()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_a8427468f39342a1990703e9f5ce7fd29} 
+void handle\+Root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the root ("{}/"{}) HTTP GET request. 
+
+Sends an HTML page with information about IoT and a button to toggle the LED. \Hypertarget{_exercise__16_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise\_16.ino@{Exercise\_16.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino main loop. 
+
+Continuously handles client requests coming in on the web server. \Hypertarget{_exercise__16_8ino_a48f3f185be3ea2d153c347a157b38d42}\index{Exercise\_16.ino@{Exercise\_16.ino}!server@{server}}
+\index{server@{server}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_a48f3f185be3ea2d153c347a157b38d42} 
+Web\+Server server (\begin{DoxyParamCaption}\item[{80}]{}{}\end{DoxyParamCaption})}
+
+
+
+Web server instance listening on port 80. 
+
+\Hypertarget{_exercise__16_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise\_16.ino@{Exercise\_16.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino setup function. 
+
+Initializes serial communication, configures the LED pin, connects to Wi\+Fi using Wi\+Fi\+Multi, starts the m\+DNS responder, sets up HTTP routes, and starts the web server. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise__16_8ino_aa6565effcd86b61e6ab132971ff14438}\index{Exercise\_16.ino@{Exercise\_16.ino}!led@{led}}
+\index{led@{led}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{led}{led}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_aa6565effcd86b61e6ab132971ff14438} 
+const int led = 4}
+
+
+
+GPIO pin used to drive the LED. 
+
+Change to the GPIO pin connected to your LED (e.\+g., 2 for built-\/in LED on many ESP32 boards). \Hypertarget{_exercise__16_8ino_a80e3f4f67583616ce41a6da66f886e10}\index{Exercise\_16.ino@{Exercise\_16.ino}!wifiMulti@{wifiMulti}}
+\index{wifiMulti@{wifiMulti}!Exercise\_16.ino@{Exercise\_16.ino}}
+\doxysubsubsection{\texorpdfstring{wifiMulti}{wifiMulti}}
+{\footnotesize\ttfamily \label{_exercise__16_8ino_a80e3f4f67583616ce41a6da66f886e10} 
+Wi\+Fi\+Multi wifi\+Multi}
+
+
+
+Wi\+Fi\+Multi instance to manage multiple networks. 
+

@@ -13,8 +13,8 @@
 /**
  * @brief WiFi credentials.
  */
-const char* ssid = "GN-Hotspot";  ///< SSID of the WiFi network.
-const char* pass = "Denc@2022110"; ///< Password of the WiFi network.
+const char* ssid = "GN-TOP-SECRET";  ///< SSID of the WiFi network.
+const char* pass = "TOP-SECRET"; ///< Password of the WiFi network.
 
 /**
  * @brief WiFi client object for ThingSpeak.
@@ -24,9 +24,9 @@ WiFiClient client;
 /**
  * @brief ThingSpeak API information.
  */
-const char* APIKey = "20205149I9EPB0ZF";    ///< Your ThingSpeak API key.
+const char* APIKey = "TOP-SECRET";    ///< Your ThingSpeak API key.
 const char* server = "api.thingspeak.com";  ///< ThingSpeak server.
-unsigned long channelID = 2808263;          ///< Your ThingSpeak channel ID.
+unsigned long channelID = 0;          ///< Your ThingSpeak channel ID.
 
 /**
  * @brief Variables to store measured data.
