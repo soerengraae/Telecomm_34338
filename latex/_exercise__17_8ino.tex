@@ -1,0 +1,165 @@
+\doxysection{Exercise\+\_\+17/\+Exercise\+\_\+17/\+Exercise\+\_\+17.ino File Reference}
+\hypertarget{_exercise__17_8ino}{}\label{_exercise__17_8ino}\index{Exercise\_17/Exercise\_17/Exercise\_17.ino@{Exercise\_17/Exercise\_17/Exercise\_17.ino}}
+
+
+Demonstration of connecting to Wi\+Fi and sending data to Thing\+Speak.  
+
+
+{\ttfamily \#include $<$Wi\+Fi.\+h$>$}\newline
+{\ttfamily \#include $<$Thing\+Speak.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_exercise__17_8ino_a58a1b12981d198e8f9d37c5912413c6a}{post\+Delay}}~5 \texorpdfstring{$\ast$}{*} 1000
+\begin{DoxyCompactList}\small\item\em Post delay in milliseconds (send data every 5 seconds). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_exercise__17_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Arduino setup function. Connects to Wi\+Fi and starts serial communication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_exercise__17_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Arduino main loop. Reads data, checks Wi\+Fi connection, sends data to Thing\+Speak, and reads back. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_exercise__17_8ino_a587ba0cb07f02913598610049a3bbb79}{ssid}} = "{}GN-\/Hotspot"{}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi credentials. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_exercise__17_8ino_a3bef28806edf8f4c8cb82584b7e8c3cb}{pass}} = "{}Denc@2022110"{}
+\begin{DoxyCompactList}\small\item\em Password of the Wi\+Fi network. \end{DoxyCompactList}\item 
+Wi\+Fi\+Client \mbox{\hyperlink{_exercise__17_8ino_a323dfc205549b3c13f0a25c1b670708a}{client}}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi client object for Thing\+Speak. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_exercise__17_8ino_a3fe2d87e95035781883990bf38554c9f}{APIKey}} = "{}20205149I9\+EPB0\+ZF"{}
+\begin{DoxyCompactList}\small\item\em Thing\+Speak API information. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_exercise__17_8ino_ab68b888c3d204a4403af6d1b22f6d07c}{server}} = "{}api.\+thingspeak.\+com"{}
+\begin{DoxyCompactList}\small\item\em Thing\+Speak server. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{_exercise__17_8ino_ac45cf487b7a438e2176288955a338f25}{channel\+ID}} = 2808263
+\begin{DoxyCompactList}\small\item\em Your Thing\+Speak channel ID. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_exercise__17_8ino_a97f752e23d287fcb47d243201aa54d76}{data1}}
+\begin{DoxyCompactList}\small\item\em Variables to store measured data. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_exercise__17_8ino_ab7e3397607b947a06e4a933e49dc08c0}{data2}}
+\begin{DoxyCompactList}\small\item\em Measured data field 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Demonstration of connecting to Wi\+Fi and sending data to Thing\+Speak. 
+
+This sketch connects the ESP32 to the specified Wi\+Fi, then periodically sends two fields of data (RSSI and a digital pin reading) to a Thing\+Speak channel. It also demonstrates reading back from the channel. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_exercise__17_8ino_a58a1b12981d198e8f9d37c5912413c6a}\index{Exercise\_17.ino@{Exercise\_17.ino}!postDelay@{postDelay}}
+\index{postDelay@{postDelay}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{postDelay}{postDelay}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a58a1b12981d198e8f9d37c5912413c6a} 
+\#define post\+Delay~5 \texorpdfstring{$\ast$}{*} 1000}
+
+
+
+Post delay in milliseconds (send data every 5 seconds). 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_exercise__17_8ino_afe461d27b9c48d5921c00d521181f12f}\index{Exercise\_17.ino@{Exercise\_17.ino}!loop@{loop}}
+\index{loop@{loop}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino main loop. Reads data, checks Wi\+Fi connection, sends data to Thing\+Speak, and reads back. 
+
+\Hypertarget{_exercise__17_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{Exercise\_17.ino@{Exercise\_17.ino}!setup@{setup}}
+\index{setup@{setup}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Arduino setup function. Connects to Wi\+Fi and starts serial communication. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_exercise__17_8ino_a3fe2d87e95035781883990bf38554c9f}\index{Exercise\_17.ino@{Exercise\_17.ino}!APIKey@{APIKey}}
+\index{APIKey@{APIKey}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{APIKey}{APIKey}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a3fe2d87e95035781883990bf38554c9f} 
+const char\texorpdfstring{$\ast$}{*} APIKey = "{}20205149I9\+EPB0\+ZF"{}}
+
+
+
+Thing\+Speak API information. 
+
+Your Thing\+Speak API key. \Hypertarget{_exercise__17_8ino_ac45cf487b7a438e2176288955a338f25}\index{Exercise\_17.ino@{Exercise\_17.ino}!channelID@{channelID}}
+\index{channelID@{channelID}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{channelID}{channelID}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_ac45cf487b7a438e2176288955a338f25} 
+unsigned long channel\+ID = 2808263}
+
+
+
+Your Thing\+Speak channel ID. 
+
+\Hypertarget{_exercise__17_8ino_a323dfc205549b3c13f0a25c1b670708a}\index{Exercise\_17.ino@{Exercise\_17.ino}!client@{client}}
+\index{client@{client}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a323dfc205549b3c13f0a25c1b670708a} 
+Wi\+Fi\+Client client}
+
+
+
+Wi\+Fi client object for Thing\+Speak. 
+
+\Hypertarget{_exercise__17_8ino_a97f752e23d287fcb47d243201aa54d76}\index{Exercise\_17.ino@{Exercise\_17.ino}!data1@{data1}}
+\index{data1@{data1}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{data1}{data1}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a97f752e23d287fcb47d243201aa54d76} 
+float data1}
+
+
+
+Variables to store measured data. 
+
+Measured data field 1. \Hypertarget{_exercise__17_8ino_ab7e3397607b947a06e4a933e49dc08c0}\index{Exercise\_17.ino@{Exercise\_17.ino}!data2@{data2}}
+\index{data2@{data2}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{data2}{data2}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_ab7e3397607b947a06e4a933e49dc08c0} 
+float data2}
+
+
+
+Measured data field 2. 
+
+\Hypertarget{_exercise__17_8ino_a3bef28806edf8f4c8cb82584b7e8c3cb}\index{Exercise\_17.ino@{Exercise\_17.ino}!pass@{pass}}
+\index{pass@{pass}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{pass}{pass}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a3bef28806edf8f4c8cb82584b7e8c3cb} 
+const char\texorpdfstring{$\ast$}{*} pass = "{}Denc@2022110"{}}
+
+
+
+Password of the Wi\+Fi network. 
+
+\Hypertarget{_exercise__17_8ino_ab68b888c3d204a4403af6d1b22f6d07c}\index{Exercise\_17.ino@{Exercise\_17.ino}!server@{server}}
+\index{server@{server}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_ab68b888c3d204a4403af6d1b22f6d07c} 
+const char\texorpdfstring{$\ast$}{*} server = "{}api.\+thingspeak.\+com"{}}
+
+
+
+Thing\+Speak server. 
+
+\Hypertarget{_exercise__17_8ino_a587ba0cb07f02913598610049a3bbb79}\index{Exercise\_17.ino@{Exercise\_17.ino}!ssid@{ssid}}
+\index{ssid@{ssid}!Exercise\_17.ino@{Exercise\_17.ino}}
+\doxysubsubsection{\texorpdfstring{ssid}{ssid}}
+{\footnotesize\ttfamily \label{_exercise__17_8ino_a587ba0cb07f02913598610049a3bbb79} 
+const char\texorpdfstring{$\ast$}{*} ssid = "{}GN-\/Hotspot"{}}
+
+
+
+Wi\+Fi credentials. 
+
+SSID of the Wi\+Fi network. 

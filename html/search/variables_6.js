@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['led_0',['LED',['../_exercise__12_8ino.html#a10fa20202b15badc5a8e474c2fd0fa66',1,'Exercise_12.ino']]],
-  ['leds_1',['LEDS',['../_exercise__12_8ino.html#ac8fe3aefa8630415d958edd13464cead',1,'Exercise_12.ino']]]
+  ['hitflag_0',['hitFlag',['../_exercise__12_8ino.html#aaad54d0838c25c858bca459a1cf1241b',1,'Exercise_12.ino']]],
+  ['hits_1',['hits',['../_exercise__12_8ino.html#a4a89f69fc22f1883cdc3150a8f9437bd',1,'Exercise_12.ino']]]
 ];

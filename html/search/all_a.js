@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['n_0',['N',['../_exercise__1_8ino.html#ad4cc461e5057371ec0f312221622162a',1,'Exercise_1.ino']]],
-  ['num_1',['num',['../_exercise__2c_8ino.html#abea371f9030e15a5d2a4c181576833d8',1,'Exercise_2c.ino']]]
+  ['main_0',['main',['../dyr_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'dyr.c']]],
+  ['miss_1',['miss',['../_exercise__12_8ino.html#a74201ac95d82066b5a7d07c5307597ac',1,'Exercise_12.ino']]],
+  ['misses_2',['misses',['../_exercise__12_8ino.html#a25a70f805b01f8fcd5dd971ee216cf79',1,'Exercise_12.ino']]]
 ];

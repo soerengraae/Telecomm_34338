@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['hit_0',['hit',['../_exercise__12_8ino.html#ae85c96d8ab4fe9d1b125421eaaef40e2',1,'Exercise_12.ino']]],
-  ['hitflag_1',['hitFlag',['../_exercise__12_8ino.html#aaad54d0838c25c858bca459a1cf1241b',1,'Exercise_12.ino']]],
-  ['hits_2',['hits',['../_exercise__12_8ino.html#a4a89f69fc22f1883cdc3150a8f9437bd',1,'Exercise_12.ino']]],
-  ['hot_3',['hot',['../_exercise__10_8ino.html#a97f8edc96dbfc7ac63407f5126f4c631',1,'Exercise_10.ino']]]
+  ['green_0',['green',['../_exercise__7_8ino.html#a90d21fa503b626c00cdc8d94863d5877',1,'green:&#160;Exercise_7.ino'],['../_exercise__2b_8ino.html#a0df115437fbb77c0311e65300c65289e',1,'green():&#160;Exercise_2b.ino']]],
+  ['greenled_1',['greenLED',['../_exercise__2b_8ino.html#a1a56ea4d69b5651122b6fb8a879ec8c4',1,'greenLED:&#160;Exercise_2b.ino'],['../_exercise__10_8ino.html#a1a56ea4d69b5651122b6fb8a879ec8c4',1,'greenLED:&#160;Exercise_10.ino']]],
+  ['greenpin_2',['greenPin',['../_exercise__7_8ino.html#a2fcdcefe7a1ffc7189224c3f6569e02b',1,'Exercise_7.ino']]]
 ];
